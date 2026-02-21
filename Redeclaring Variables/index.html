@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Arithmetic</title>
+    <title>Redeclaring Variables</title>
 </head>
 <body>
-    <h1>JavaScript Variables</h1>
-
-    <p>The result of adding 5 + 2 + 3 is:</p>
+    <h2>Redeclaring a Variable Using var</h2>
 
     <p id="anand yadav"></p>
 
     <script>
-    let x = 5 + 2 + 3;
+    var  x = 10;
+    // Here x is 10
 
+    {  
+    var x = 200;
+    // Here x is 200
+    }
+
+    // Here x is 200
     document.getElementById("anand yadav").innerHTML = x;
     </script>
 </body>
