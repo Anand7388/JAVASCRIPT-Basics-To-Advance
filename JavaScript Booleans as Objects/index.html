@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Booleans as Objects</title>
+</head>
+<body>
+<h1>JavaScript Booleans</h1>
+<p>Booleans and Boolean objects cannot be safely compared:</p>
+
+<p id="ram"></p>
+
+<script>
+// x is a boolean
+let x = false;
+
+// y is an object
+let y = new Boolean(false);
+
+document.getElementById("ram").innerHTML = typeof x + "<br>" + typeof y;
+</script>
+</body>
+</html>
