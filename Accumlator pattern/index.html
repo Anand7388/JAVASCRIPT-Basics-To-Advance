@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accumlator Pattern</title>
+</head>
+<body>
+    <h1>Accumlator Pattern</h1>
+    <p>The accumulator pattern is a common programming technique where a variable is used to accumulate values during the execution of a loop or a recursive function.</p>
+    <h2>Example in JavaScript</h2>
+    <script>
+        // let nums = [3, 6, 7,9,4];
+        // let sum = 0;  // this variable will accumulate the sum of the numbers 
+        // for (let i = 0; i < nums.length; i++) {
+        //     sum += nums[i];  // add each numer to the sum variable 
+        // }
+        // // console.log("The sum of the numbers is: " + sum);  // output: the sum of  the  numbers is: 29
+
+        // console.log(`the sum of the numbers is: ${sum}`); 
+
+        let nums = [1, 2,3, 6, 7, 9, 8];
+        let squares = [];  // this variable will accumulate the squares of the numbers 
+        for (let i =0; i < nums.length; i++) {
+            squares.push(nums[i] * nums[i]);  // add the square of each number to the squares array
+
+        }
+        console.log("The squares of the numbers are :" + squares);  // output: the squares of the numbers
+
+    </script>
+    
+</body>
+</html>
