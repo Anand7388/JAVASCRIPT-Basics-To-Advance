@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+</head>
+<body>
+    <h1> Questions</h1>
+
+    Q1. create an array of numbers [5,6] add 4 at the beginning and 7 at the end of the array.
+
+    Q2. create a method to return an element at a particular position in the array.
+
+    Q3. create an array copy using slice method .
+
+    Q4. create a while loop that exits after counting 5 prime numbers.
+
+    Q5. modify the abov loop to finish using break.
+
+    Q6. create a for loop that prints numbers 1 to 10 in reverse order.
+
+    Q7. using continue only print positive numbers from the given arrsy [1, -6, 5, 7, -9, 8]. 
+
+    Q8. using accumulator pattern concatenate all the string in the given array ['anand', 'coding', 'javascript', 'course', 'is', 'best'] .
+
+
+    <script>
+        // Q1. create an array of numbers [5,6] add 4 at the beginning and 7 at the end of the array.
+        const q1Arr = [5, 6];
+        q1Arr.unshift(4);
+        q1Arr.push(7);
+        console.log('Q1', q1Arr);  // [4, 5, 6, 7]
+
+        // Q2. create a method to return an element at a particular position in the array.
+        function getElement(arr, position) {
+            if (position < 1 || position > arr.length) {
+                return undefined;
+            }
+            return arr[position - 1];
+        }
+
+        const q2Arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        console.log('Q2', getElement(q2Arr, 5));  // 5
+
+        // Q3. create an array copy using slice method.
+        let original = [10, 20, 30, 40];
+        let copy = original.slice();
+        console.log('Q3', copy);
+
+        // Q4. create a while loop that exits after counting 5 prime numbers.
+        function isPrime(n) {
+            if (n <= 1) return false;
+            if (n <= 3) return true;
+            if (n % 2 === 0) return false;
+            for (let i = 3; i * i <= n; i += 2) {
+                if (n % i === 0) return false;
+            }
+            return true;
+        }
+
+        let count = 0;
+        let num = 2;
+        while (count < 5) {
+            if (isPrime(num)) {
+                console.log('Q4 prime', num);
+                count++;
+            }
+            num++;
+        }
+
+        // Q5. modify the above loop to finish using break.
+        let n = 2;
+        count = 0;
+        while (true) {
+            if (isPrime(n)) {
+                console.log('Q5 prime', n);
+                count++;
+            }
+            if (count === 5) {
+                break;
+            }
+            n++;
+        }
+
+        // Q6. create a for loop that prints numbers 1 to 10 in reverse order.
+        for (let i = 10; i >= 1; i--) {
+            console.log('Q6', i);
+        }
+
+        // Q7. using continue only print positive numbers from the given array.
+        let arr7 = [1, -6, 5, 7, -9, 8];
+        for (let i = 0; i < arr7.length; i++) {
+            if (arr7[i] <= 0) continue;
+            console.log('Q7', arr7[i]);
+        }
+
+        // Q8. using accumulator pattern concatenate all the string in the given array.
+        let words = ['anand', 'coding', 'javascript', 'course', 'is', 'best'];
+        let sentence = '';
+        for (let i = 0; i < words.length; i++) {
+            sentence += (i === 0 ? '' : ' ') + words[i];
+        }
+        console.log('Q8', sentence);
+    </script>
+    
+</body>
+</html>
