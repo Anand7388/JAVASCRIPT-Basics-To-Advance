@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Functions As Values</title>
+</head>
+<body>
+    <h1>Anonymous Functions as Values</h1>
+    <p>Anonymous functions can be assigned to variables and used as values.</p>
+    <script>
+    //    let sum =function(num1, num2) {
+    //         return num1 + num2;
+    //     }
+    //     let newSum = sum;   // assining the anonymous function to a new variable 
+    //     console.log(sum()); // output: 15
+
+
+    // add three numbers using an anonymous function
+    let sum =function(num1, num2) {
+        return num1 + num2;
+
+    };
+    let sumThreeNumbers = function(num1, num2, num3, sumTwoNumbers) {
+        let sum1 = sumTwoNumbers(num1,num2);
+        return sumTwoNumbers(sum1, num3);
+    }
+    console.log(sumThreeNumbers(9, 99, 999, sum));  // output: 1107 
+        
+    </script>
+    
+</body>
+</html>
