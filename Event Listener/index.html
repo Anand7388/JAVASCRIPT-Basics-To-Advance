@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener </title>
+</head>
+<body>
+    <h1>Event Listener </h1>
+    <p>This is a simple event listener example.</p>
+    <button id="my-button">Click me!</button>
+    <script>
+        // Get the button element
+        let buttonElement = document.querySelector('#my-button');
+        // Add a click event listener to the button 
+        let behavior = event => console.log('I am Clicked!');
+        buttonElement.addEventListener('click', behavior);
+        let printDate = event => console.log(new Date());
+        buttonElement.addEventListener('click', printDate);
+        buttonElement.removeEventListener('click', behavior);
+        
+
+    </script>
+    
+</body>
+</html>
