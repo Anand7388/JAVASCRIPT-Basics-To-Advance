@@ -10,11 +10,16 @@
     <p>This is a simple for each loop example.</p>
     <button id="my-button">Click me!</button>
     <script>
-        let arr = [3, 5, 7,9];
-        for (let i = 0; i < arr.length; i++) {
-            console.log(arr[i]);
+        //find the position of the button element 
+        let arr = [3, 5, 7, 9];
+        function Search (arr, num) {
+            for (let i=0; i < arr.length; i++) {
+                if (arr[i] === num)  {
+                    console.log(`element found at : ${i}`);
+                }
+            }
         }
-        arr.forEach((num) => console.log(num));
+        Search(arr, 7);
     </script>
     
 </body>
